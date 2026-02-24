@@ -1,0 +1,41 @@
+# Python virtual environment
+venv/
+.env
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Logs
+*.log
+logs/
+
+# Docker
+*.docker
+docker-compose.override.yml
+docker-compose.override.yaml
+docker-compose.local.yml
+docker-compose.local.yaml
+
+# Kubernetes / Helm / GitOps
+*.kubeconfig
+*.yaml.swp
+*.secret.yaml
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS
+.DS_Store
+
+# Terraform (if any)
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Node (if used in frontend / UI)
+node_modules/
+dist/
