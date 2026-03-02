@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Bashir-Warsame/eks-gitops-infinity-solo
     targetRevision: main
-    path: base
+    path: k8/ingress
   destination:
     server: https://kubernetes.default.svc
     namespace: infinity
