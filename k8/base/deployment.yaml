@@ -1,0 +1,41 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infinity-search
+  namespace: infinity
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: infinity-search
+  template:
+    metadata:
+      labels:
+        app: infinity-search
+    spec:
+      containers:
+        - name: infinity-search
+          image: bwarsame/infinity-search:latest
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: infinity-search
+  namespace: infinity
+spec:
+  selector:
+    app: infinity-search
+  ports:
+    - port: 80
+      targetPort: 5000
+  type: ClusterIP

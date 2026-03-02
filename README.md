@@ -1,7 +1,6 @@
 # Infinity Search Solo — Production-Style Deployment on EKS with GitOps
 
-![Infinity Search Screenshot](images/search.png)  
-*Screenshot of the app running via Kubernetes Ingress*
+![Infinity Search Screenshot](images/search.png)
 
 ---
 

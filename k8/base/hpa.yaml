@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+spec:
+  minReplicas: 2
+  maxReplicas: 5
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50

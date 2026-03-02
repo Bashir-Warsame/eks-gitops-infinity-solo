@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: infinity-search
+  namespace: infinity
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"  
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+spec:
+  rules:
+    - host: infinity-search.bashirwarsame.online      # replace with your domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: infinity-search
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - infinity-search.bashirwarsame.online
+      secretName: infinity-search-tls

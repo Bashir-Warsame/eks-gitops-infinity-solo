@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: infinity-search
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Bashir-Warsame/eks-gitops-infinity-solo
+    targetRevision: main
+    path: base
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: infinity
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
