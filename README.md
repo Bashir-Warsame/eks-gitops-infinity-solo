@@ -184,13 +184,3 @@ Infinity Search Solo demonstrates how **GitOps with Argo CD on Amazon EKS** enab
 
 The architecture and practices shown in this project closely mirror how modern **enterprise and SRE teams deploy and operate Kubernetes workloads**.
 
----
-
-If you want next, I can:
-
-* Tighten this further for **Big Tech / SRE interviews**
-* Write a **1-paragraph executive summary** for recruiters
-* Convert this into a **design-doc / RFC style README**
-* Help you explain *why CI/CD was intentionally out of scope*
-
-Just say the word.
